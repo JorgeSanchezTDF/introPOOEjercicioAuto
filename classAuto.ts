@@ -3,43 +3,41 @@ export class Auto {
     protected modelo: string;;
     protected color: string;
     protected combustible: string;
-    protected deposito:number;
-    protected depositoActual:number;
+    protected deposito: number;
+    protected depositoActual: number;
     protected velocidad: number;
 
-    public constructor(parametroMarca:string, parametroModelo:string, parametroColor:string, parametroCombustible:string, parametroDeposito:number,parametroDepositoActual:number, paramVelocidad:number) {
+    public constructor(parametroMarca: string, parametroModelo: string, parametroColor: string, parametroCombustible: string, parametroDeposito: number, parametroDepositoActual: number, paramVelocidad: number) {
         this.marca = parametroMarca;
         this.modelo = parametroModelo;
         this.color = parametroColor;
         this.combustible = parametroCombustible;
         this.deposito = parametroDeposito;
         this.depositoActual = parametroDepositoActual
-        this.velocidad = paramVelocidad;        
+        this.velocidad = paramVelocidad;
     }
-/* Metodo:
- llenarTanque
- acelerar
- frenar
- */
-public llenarTanque() {
-    let combustibleACargar:number = this.deposito - this.depositoActual;
+    /* Metodo:
+     llenarTanque
+     acelerar
+     frenar
+     */
+    public llenarTanque() {
+        let combustibleACargar: number = this.deposito - this.depositoActual;
 
-  console.log('Tú tanque esta lleno se cargó ', combustibleACargar);
-  
-  this.depositoActual = this.deposito
-}
+        console.log('Tú tanque esta lleno se cargó ', combustibleACargar);
 
-public acelerar(){
-    this.velocidad += 5;
-}
+        this.depositoActual = this.deposito
+    }
 
-public frenar(){
-    this.velocidad -= 5;
-}
+    public acelerar() {
+        this.velocidad += 5;
+    }
 
-public velocidadActual() {
-    console.log('La velocidad actual es: ' + this.velocidad);
+    public frenar() {
+        this.velocidad -= 5;
+    }
 
-}
-
+    public velocidadActual() {
+        console.log('La velocidad actual es: ' + this.velocidad);
+    }
 }
